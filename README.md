@@ -14,12 +14,14 @@ virtualenv/bin/python cozy-couch-continuous-replication.py http://127.0.0.1:5984
 ```
 
 # Automate it
-# Launch crontab
+Launch crontab
 ```bash
 crontab -e
 ```
-# Paste crontab
-# Fix path (I install it in /root/cozy-couch-continuous-replication)
+
+Paste crontab
+
+Fix path (I install it in /root/cozy-couch-continuous-replication)
 ```
 */5 *  *   *   *     /root/cozy-couch-continuous-replication/virtualenv/bin/python /root/cozy-couch-continuous-replication/cozy-couch-continuous-replication.py http://127.0.0.1:5984 cozy backup-cozy > /dev/null 2>&1
 ```
